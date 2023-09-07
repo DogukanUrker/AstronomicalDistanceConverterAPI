@@ -9,7 +9,7 @@ async def LMtoKM(lm: int):
 
 
 @lm.get("/lm/au/{lm}")
-async def LMtoLM(lm: int):
+async def LMtoAU(lm: int):
     return lm * 0.12023933
 
 
