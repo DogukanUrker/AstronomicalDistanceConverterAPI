@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from routes.au import au
 from routes.km import km
 from routes.lm import lm
+from routes.ls import ls
 
 app = FastAPI()
 origins = ["*"]
@@ -21,6 +22,7 @@ app.add_middleware(
 app.include_router(au)
 app.include_router(km)
 app.include_router(lm)
+app.include_router(ls)
 
 match __name__ == "__main__":
     case True:
