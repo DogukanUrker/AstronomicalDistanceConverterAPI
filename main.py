@@ -2,6 +2,8 @@ import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from routes.au import au
+from routes.km import km
+
 app = FastAPI()
 origins = ["*"]
 
@@ -16,7 +18,7 @@ app.add_middleware(
 
 
 app.include_router(au)
-
+app.include_router(km)
 
 match __name__ == "__main__":
     case True:
