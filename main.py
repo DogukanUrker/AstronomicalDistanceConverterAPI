@@ -6,6 +6,7 @@ from routes.km import km
 from routes.lm import lm
 from routes.ls import ls
 from routes.ly import ly
+from routes.mi import mi
 
 app = FastAPI()
 origins = ["*"]
@@ -25,6 +26,7 @@ app.include_router(km)
 app.include_router(lm)
 app.include_router(ls)
 app.include_router(ly)
+app.include_router(mi)
 
 match __name__ == "__main__":
     case True:
