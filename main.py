@@ -1,0 +1,23 @@
+import uvicorn
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from routes.au import au
+app = FastAPI()
+origins = ["*"]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_origins=origins,
+    allow_credentials=True,
+)
+
+
+app.include_router(au)
+
+
+match __name__ == "__main__":
+    case True:
+        uvicorn.run("main:app", host="127.0.0.1", port=1818, workers=1, reload=True)
