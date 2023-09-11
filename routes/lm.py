@@ -3,6 +3,12 @@ from fastapi import APIRouter
 lm = APIRouter()
 
 
+@lm.get("/lm/lm/{lm}")
+@lm.get("/light-minute/light-minute/{lm}")
+async def LMtoLM(lm: float):
+    return lm
+
+
 @lm.get("/lm/km/{lm}")
 @lm.get("/light-minute/kilometer/{lm}")
 async def LMtoKM(lm: float):

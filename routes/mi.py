@@ -3,6 +3,12 @@ from fastapi import APIRouter
 mi = APIRouter()
 
 
+@mi.get("/mi/mi/{mi}")
+@mi.get("/miles/miles/{mi}")
+async def MItoMI(mi: float):
+    return mi
+
+
 @mi.get("/mi/km/{mi}")
 @mi.get("/miles/kilometer/{mi}")
 async def MItoKM(mi: float):

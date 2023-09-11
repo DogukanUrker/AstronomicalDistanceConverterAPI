@@ -3,6 +3,12 @@ from fastapi import APIRouter
 km = APIRouter()
 
 
+@km.get("/km/km/{km}")
+@km.get("/kilometer/kilometer/{km}")
+async def KMtoKM(km: float):
+    return km
+
+
 @km.get("/km/au/{km}")
 @km.get("/kilometer/astronomical-unit/{km}")
 async def KMtoAU(km: float):

@@ -3,6 +3,12 @@ from fastapi import APIRouter
 pc = APIRouter()
 
 
+@pc.get("/pc/pc/{pc}")
+@pc.get("/parsec/parsec/{pc}")
+async def PCtoPC(pc: float):
+    return pc
+
+
 @pc.get("/pc/km/{pc}")
 @pc.get("/parsec/kilometer/{pc}")
 async def PCtoKM(pc: float):

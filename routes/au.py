@@ -3,6 +3,12 @@ from fastapi import APIRouter
 au = APIRouter()
 
 
+@au.get("/au/au/{au}")
+@au.get("/astronomical-unit/astronomical-unit/{au}")
+async def AUtoAU(au: float):
+    return au
+
+
 @au.get("/au/km/{au}")
 @au.get("/astronomical-unit/kilometer/{au}")
 async def AUtoKM(au: float):
