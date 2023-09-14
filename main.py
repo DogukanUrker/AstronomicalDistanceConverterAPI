@@ -9,7 +9,16 @@ from routes.ly import ly
 from routes.mi import mi
 from routes.pc import pc
 
-app = FastAPI()
+app = FastAPI(
+    title="AstronomicalDistanceConverterAPI",
+    version="1.0.0",
+    contact={
+        "name": "Dogukan Urker",
+        "url": "https://dogukanurker.com",
+        "email": "dogukanurker@icloud.com",
+    },
+)
+
 origins = ["*"]
 
 
