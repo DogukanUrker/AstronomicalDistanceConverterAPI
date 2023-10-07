@@ -26,7 +26,7 @@ it's ready to run 🎉
 
 ## Requests 📚
 
-Transtale X to Y
+Convert X to Y.
 
 ```
 /x/y/{int}
