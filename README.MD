@@ -46,25 +46,25 @@ If X value is abbreviation then Y value must be abbreviated to, same for full un
 Examples:
 
 ```
-/ly/km/3
+/ly/km/1
 ```
 
 ```
-28382191417742.402
-```
-
-
-```
-/astronomical-unit/light-second/3
-```
-
-```
-1497.01434
+9460730472580.8
 ```
 
 
 ```
-/parsec/mi/3
+/astronomical-unit/light-second/1
+```
+
+```
+499.00478
+```
+
+
+```
+/parsec/mi/1
 ```
 
 ```json
